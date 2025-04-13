@@ -85,10 +85,10 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             {!isAuthenticated ? (
               <>
-                <Link href="/login">
+                <Link href="/user/login">
                   <Button variant="ghost">Login</Button>
                 </Link>
-                <Link href="/signup">
+                <Link href="/user/signup">
                   <Button variant="primary">Sign Up</Button>
                 </Link>
               </>
