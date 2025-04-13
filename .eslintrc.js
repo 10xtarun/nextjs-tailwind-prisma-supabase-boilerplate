@@ -81,4 +81,5 @@ module.exports = {
     React: true,
     JSX: true,
   },
+  ignorePatterns: ["src/__tests__/**/**", "src/models/prisma/**/**"],
 };

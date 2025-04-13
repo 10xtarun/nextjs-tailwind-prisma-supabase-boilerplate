@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/models/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Client {
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+  users     User[]
+}
+
+model User {
+  id         String   @id
+  email      String   @unique
+  fullName   String
+  role       Role
+  isApproved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  clientId   String?
+  client     Client?  @relation(fields: [clientId], references: [id])
+  Venue      Venue[]
+}
+
+model Venue {
+  id        String   @id @default(uuid())
+  name      String
+  location  String?
+  capacity  Int?
+  ownerId   String
+  createdAt DateTime @default(now())
+  owner     User     @relation(fields: [ownerId], references: [id])
+}
+
+enum Role {
+  admin
+  venue_owner
+  attendee
+}
