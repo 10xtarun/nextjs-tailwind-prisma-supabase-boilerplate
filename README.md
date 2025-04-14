@@ -1,3 +1,20 @@
+# Project Name
+
+This project is a customized version of the [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) by Theodorus Clarence.
+
+## Overview
+
+This project includes the following customizations:
+
+- Implemented user authentication with Supabase, including signup and login flows.
+- Enhanced UI/UX with responsive design using Tailwind CSS.
+- Integrated secure session management and cookie handling.
+- Added user profile management features.
+
+## Citation
+
+This project is based on the [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) by Theodorus Clarence. We appreciate the foundation provided by this excellent starter template.
+
 # Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
 
 <div align="center">
