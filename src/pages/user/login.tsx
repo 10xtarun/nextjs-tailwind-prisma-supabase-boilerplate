@@ -71,16 +71,16 @@ export default function UserLoginPage() {
       <Seo templateTitle='User Login' />
       <main>
         <section className='bg-white'>
-          <div className='layout min-h-screen flex items-center justify-center py-20'>
+          <div className='layout min-h-screen flex items-center justify-center py-20 px-4 md:px-0'>
             <div className='w-full max-w-md space-y-8'>
               <div className='text-center'>
-                <h1 className='text-4xl font-bold'>User Login</h1>
-                <p className='mt-2 text-gray-600'>
+                <h1 className='text-3xl md:text-4xl font-bold'>User Login</h1>
+                <p className='mt-2 text-sm md:text-base text-gray-600'>
                   Sign in to access your profile
                 </p>
               </div>
 
-              <div className='mt-8 space-y-6 bg-white p-8 shadow-lg rounded-lg border border-gray-200'>
+              <div className='mt-8 space-y-6 bg-white p-6 md:p-8 shadow-lg rounded-lg border border-gray-200'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
                   <div>
                     <label htmlFor='email' className='block text-sm font-medium text-gray-700'>

@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { useRouter } from 'next/router';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Button from '@/components/buttons/Button';
@@ -75,16 +75,16 @@ export default function UserSignupPage() {
       <Seo templateTitle='Sign Up' />
       <main>
         <section className='bg-white'>
-          <div className='layout min-h-screen flex items-center justify-center py-20'>
+          <div className='layout min-h-screen flex items-center justify-center py-20 px-4 md:px-0'>
             <div className='w-full max-w-md space-y-8'>
               <div className='text-center'>
-                <h1 className='text-4xl font-bold'>Create Account</h1>
-                <p className='mt-2 text-gray-600'>
+                <h1 className='text-3xl md:text-4xl font-bold'>Create Account</h1>
+                <p className='mt-2 text-sm md:text-base text-gray-600'>
                   Sign up to get started
                 </p>
               </div>
 
-              <div className='mt-8 space-y-6 bg-white p-8 shadow-lg rounded-lg border border-gray-200'>
+              <div className='mt-8 space-y-6 bg-white p-6 md:p-8 shadow-lg rounded-lg border border-gray-200'>
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
                   <div>
                     <label htmlFor='fullName' className='block text-sm font-medium text-gray-700'>

@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 
 import Button from '@/components/buttons/Button';
@@ -149,19 +149,6 @@ export default function UserProfilePage() {
       });
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const handleSignOut = async () => {
-    try {
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
-      router.push('/user/login');
-    } catch (error) {
-      showToast({
-        message: error instanceof Error ? error.message : 'Failed to sign out',
-        type: 'error',
-      });
     }
   };
 
